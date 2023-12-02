@@ -6,21 +6,23 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public TextMeshProUGUI titleText;
-    public Button beginBtn;
-
     public TextMeshProUGUI welcomeText;
     public TextMeshProUGUI storyText;
     public Button nextBtn;
 
 
-    public Button startGameBtn;
+    public TextMeshProUGUI instructionsTitle;
+    public TextMeshProUGUI instruction1;
+    public TextMeshProUGUI instruction2;
+    public TextMeshProUGUI instruction3;
+    public Button startBtn;
 
     // Start is called before the first frame update
     void Start()
     {
-        titleText.gameObject.SetActive(true);
-        beginBtn.gameObject.SetActive(true);
+        welcomeText.gameObject.SetActive(true);
+        storyText.gameObject.SetActive(true);
+        nextBtn.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
@@ -29,26 +31,29 @@ public class GameManager : MonoBehaviour
         
     }
 
-    // called by startBtn
-    public void DisplayStory(){
-        // removing previous UI Elements
-        titleText.gameObject.SetActive(false);
-        beginBtn.gameObject.SetActive(false);
-
-        // adding new UI Elements
-        welcomeText.gameObject.SetActive(true);
-        storyText.gameObject.SetActive(true);
-        nextBtn.gameObject.SetActive(true);
-    }
-
     // called by nextBtn
     public void DisplayInstructions(){
         // removing previous UI Elements
-        welcomeText.gameObject.SetActive(true);
-        storyText.gameObject.SetActive(true);
-        nextBtn.gameObject.SetActive(true);
+        welcomeText.gameObject.SetActive(false);
+        storyText.gameObject.SetActive(false);
+        nextBtn.gameObject.SetActive(false);
 
         // adding new UI Elements
+        instructionsTitle.gameObject.SetActive(true);
+        instruction1.gameObject.SetActive(true);
+        instruction2.gameObject.SetActive(true);
+        instruction3.gameObject.SetActive(true);
+        startBtn.gameObject.SetActive(true);
+    }
+
+    public void RemoveInstructions(){
+        
+        // removing previous UI Elements
+        instructionsTitle.gameObject.SetActive(false);
+        instruction1.gameObject.SetActive(false);
+        instruction2.gameObject.SetActive(false);
+        instruction3.gameObject.SetActive(false);
+        startBtn.gameObject.SetActive(false);
     }
 
     
