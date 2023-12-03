@@ -9674,6 +9674,7 @@ MonoBehaviour:
   teleportDist: 3
   canMove: 0
   isGameActive: 0
+  isTeleporting: 0
   welcomeText: {fileID: 2138250416}
   storyText: {fileID: 1840266562}
   nextBtn: {fileID: 1197377376}
@@ -16215,4 +16216,3 @@ SceneRoots:
   - {fileID: 512567631}
   - {fileID: 1296886441}
   - {fileID: 399786155}
-  - {fileID: 900022962}
