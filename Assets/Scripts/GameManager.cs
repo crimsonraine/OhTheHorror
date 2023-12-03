@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     public float teleportDist = 5f;
     private float minDist = 10f;
     public bool canMove;
+
+
+    
     public bool isTeleporting = false;
     public bool isGameActive;
 
