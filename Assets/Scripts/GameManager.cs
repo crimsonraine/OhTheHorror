@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     public int proximityMeterFill;
     public float dist;
-    private float teleportRate = 5.0f;
+    private float teleportRate = 20.0f;
     public float teleportDist = 10f;
     public bool canMove;
     public bool isGameActive;
@@ -39,7 +39,6 @@ public class GameManager : MonoBehaviour
         nextBtn.gameObject.SetActive(true);
 
         dist = Vector3.Distance(player.transform.position, enemy.transform.position);
-        StartCoroutine(TeleportEnemy());
     }
 
     // Update is called once per frame
@@ -48,18 +47,24 @@ public class GameManager : MonoBehaviour
         dist = Vector3.Distance(player.transform.position, enemy.transform.position);
     }
 
+    void StartTeleporting()
+    {
+        StartCoroutine(TeleportEnemy());
+        // balances the game in case player gets caught in room
+    }
+
     IEnumerator TeleportEnemy()
     {
         while (true)
         {
             yield return new WaitForSeconds(teleportRate);
 
-            Vector3 teleportPosition = new Vector3(
-                player.transform.position.x + Random.Range(-teleportDist, teleportDist),
-                player.transform.position.y,
-                player.transform.position.z + Random.Range(-teleportDist, teleportDist)
-            );
-            enemy.transform.position = teleportPosition;
+            // Vector3 teleportPosition = new Vector3(
+            //     player.transform.position.x + Random.Range(-teleportDist, teleportDist),
+            //     player.transform.position.y,
+            //     player.transform.position.z + Random.Range(-teleportDist, teleportDist)
+            // );
+            enemy.transform.position = new Vector3(0f, 4f, 12f);
         }
     }
 
@@ -93,6 +98,7 @@ public class GameManager : MonoBehaviour
         startBtn.gameObject.SetActive(false);
 
         isGameActive = true;
+        Invoke("StartTeleporting", 10.0f);
     }
 
 

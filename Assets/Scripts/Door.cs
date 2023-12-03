@@ -36,8 +36,6 @@ public class Door : MonoBehaviour
         {
             if (transform.rotation.eulerAngles.y == baseRotation)
             {
-                Debug.Log(transform.rotation.eulerAngles.y);
-                Debug.Log(baseRotation);
                 transform.Rotate(new Vector3(0, 90, 0));
             }
             else
