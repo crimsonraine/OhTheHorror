@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyMove : MonoBehaviour
+public class EnemyAI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public NavMeshAgent ai;
+    public Animator anim;
+    public Transform player;
+    Vector3 target;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        target = player.position;
+        ai.destination = target;
+        ai.speed = 1.5f;
+        anim.speed = 0.2f;
     }
 }
