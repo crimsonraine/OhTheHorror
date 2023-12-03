@@ -6,7 +6,6 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-
     public bool canMove;
 
     public TextMeshProUGUI welcomeText;
