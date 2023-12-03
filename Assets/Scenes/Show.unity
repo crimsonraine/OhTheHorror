@@ -2062,28 +2062,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!195 &604264169
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604264159}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.36
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1.84
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!114 &604264170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2096,6 +2074,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38a7058d853b24b929f7b5dc7baefbcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!195 &604264174
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604264159}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.26
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.76
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &613096678
 GameObject:
   m_ObjectHideFlags: 0
@@ -4193,15 +4193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 579fc122870eb49b9bb0f5ad2123e674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canMove: 0
-  welcomeText: {fileID: 2138250416}
-  storyText: {fileID: 1840266562}
-  nextBtn: {fileID: 1197377376}
-  instructionsTitle: {fileID: 879524848}
-  instruction1: {fileID: 1482299290}
-  instruction2: {fileID: 1796016594}
-  instruction3: {fileID: 383100954}
-  startBtn: {fileID: 296572538}
 --- !u!4 &1303411048
 Transform:
   m_ObjectHideFlags: 0
@@ -4831,10 +4822,10 @@ PrefabInstance:
       addedObject: {fileID: 604264163}
     - targetCorrespondingSourceObject: {fileID: 1027175079354532261, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 604264169}
+      addedObject: {fileID: 604264170}
     - targetCorrespondingSourceObject: {fileID: 1027175079354532261, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 604264170}
+      addedObject: {fileID: 604264174}
   m_SourcePrefab: {fileID: 100100000, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
 --- !u!1 &1691297028 stripped
 GameObject:
