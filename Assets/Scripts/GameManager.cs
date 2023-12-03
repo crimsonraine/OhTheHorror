@@ -6,7 +6,17 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject enemy;
+    public GameObject player;
+
+    public int proximityMeterFill;
+    public float dist;
+    private float teleportRate = 10.0f;
+    public float teleportDist = 5f;
+    private float minDist = 10f;
     public bool canMove;
+    public bool isTeleporting = false;
+    public bool isGameActive;
 
     public TextMeshProUGUI welcomeText;
     public TextMeshProUGUI storyText;
@@ -25,20 +35,42 @@ public class GameManager : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         canMove = false;
-        
+
         welcomeText.gameObject.SetActive(true);
         storyText.gameObject.SetActive(true);
         nextBtn.gameObject.SetActive(true);
+
+        dist = Vector3.Distance(player.transform.position, enemy.transform.position);
+        StartCoroutine(TeleportEnemy());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        dist = Vector3.Distance(player.transform.position, enemy.transform.position);
+    }
+
+    IEnumerator TeleportEnemy()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(teleportRate);
+            isTeleporting = true;
+
+            Vector3 teleportPosition = new Vector3(
+                player.transform.position.x + Random.Range(-teleportDist, teleportDist),
+                player.transform.position.y,
+                player.transform.position.z + Random.Range(-teleportDist, teleportDist)
+            );
+
+            enemy.transform.position = teleportPosition;
+            isTeleporting = false;
+        }
     }
 
     // called by nextBtn
-    public void DisplayInstructions(){
+    public void DisplayInstructions()
+    {
         // removing previous UI Elements
         welcomeText.gameObject.SetActive(false);
         storyText.gameObject.SetActive(false);
@@ -53,7 +85,8 @@ public class GameManager : MonoBehaviour
     }
 
     // called by startBtn
-    public void RemoveInstructions(){
+    public void RemoveInstructions()
+    {
 
         canMove = true;
 
@@ -63,7 +96,9 @@ public class GameManager : MonoBehaviour
         instruction2.gameObject.SetActive(false);
         instruction3.gameObject.SetActive(false);
         startBtn.gameObject.SetActive(false);
+
+        isGameActive = true;
     }
 
-    
+
 }

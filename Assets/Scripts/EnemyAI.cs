@@ -9,6 +9,10 @@ public class EnemyAI : MonoBehaviour
     public Animator anim;
     public Transform player;
     Vector3 target;
+    void Start()
+    {
+        StartCoroutine(JumpForward());
+    }
 
     void Update()
     {
@@ -16,5 +20,11 @@ public class EnemyAI : MonoBehaviour
         ai.destination = target;
         ai.speed = 5.5f;
         anim.speed = 5.5f;
+    }
+
+    IEnumerator JumpForward()
+    {
+        yield return new WaitForSeconds(2f);
+        GetComponent<Rigidbody>().AddForce((transform.forward + transform.up) * 7f, ForceMode.Impulse);
     }
 }
