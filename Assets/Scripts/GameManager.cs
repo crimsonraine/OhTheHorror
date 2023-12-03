@@ -6,6 +6,10 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+
+    public static GameManager instance;
+    public static bool canMove;
+
     public TextMeshProUGUI welcomeText;
     public TextMeshProUGUI storyText;
     public Button nextBtn;
@@ -20,6 +24,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        canMove = false;
         welcomeText.gameObject.SetActive(true);
         storyText.gameObject.SetActive(true);
         nextBtn.gameObject.SetActive(true);
@@ -46,8 +51,11 @@ public class GameManager : MonoBehaviour
         startBtn.gameObject.SetActive(true);
     }
 
+    // called by startBtn
     public void RemoveInstructions(){
-        
+
+        canMove = true;
+
         // removing previous UI Elements
         instructionsTitle.gameObject.SetActive(false);
         instruction1.gameObject.SetActive(false);
