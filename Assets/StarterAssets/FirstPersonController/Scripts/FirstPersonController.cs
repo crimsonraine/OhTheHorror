@@ -123,11 +123,11 @@ namespace StarterAssets
 
 		private void LateUpdate()
 		{
-			// if (script.canMove)
-			// {
-			// 	CameraRotation();
-			// }
-			CameraRotation();
+			if (script.canMove)
+			{
+				CameraRotation();
+			}
+			// CameraRotation();
 		}
 
 		private void GroundedCheck()
