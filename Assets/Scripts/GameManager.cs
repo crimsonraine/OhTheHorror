@@ -11,15 +11,14 @@ public class GameManager : MonoBehaviour
 
     public int proximityMeterFill;
     public float dist;
-    private float teleportRate = 10.0f;
-    public float teleportDist = 5f;
-    private float minDist = 10f;
+    private float teleportRate = 5.0f;
+    public float teleportDist = 10f;
     public bool canMove;
 
 
     
-    public bool isTeleporting = false;
     public bool isGameActive;
+    public bool isTeleporting = false;
 
     public TextMeshProUGUI welcomeText;
     public TextMeshProUGUI storyText;
@@ -58,16 +57,13 @@ public class GameManager : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(teleportRate);
-            isTeleporting = true;
 
             Vector3 teleportPosition = new Vector3(
                 player.transform.position.x + Random.Range(-teleportDist, teleportDist),
                 player.transform.position.y,
                 player.transform.position.z + Random.Range(-teleportDist, teleportDist)
             );
-
             enemy.transform.position = teleportPosition;
-            isTeleporting = false;
         }
     }
 
