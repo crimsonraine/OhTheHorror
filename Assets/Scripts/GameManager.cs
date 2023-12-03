@@ -14,7 +14,11 @@ public class GameManager : MonoBehaviour
     private float teleportRate = 20.0f;
     public float teleportDist = 10f;
     public bool canMove;
+
+
+    
     public bool isGameActive;
+    public bool isTeleporting = false;
 
     public TextMeshProUGUI welcomeText;
     public TextMeshProUGUI storyText;
