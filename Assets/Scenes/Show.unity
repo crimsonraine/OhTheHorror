@@ -1788,28 +1788,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!195 &604264169
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604264159}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.36
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1.84
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!114 &604264170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3514,6 +3492,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 579fc122870eb49b9bb0f5ad2123e674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  welcomeText: {fileID: 0}
+  storyText: {fileID: 0}
+  nextBtn: {fileID: 0}
+  instructionsTitle: {fileID: 0}
+  instruction1: {fileID: 0}
+  instruction2: {fileID: 0}
+  instruction3: {fileID: 0}
+  startBtn: {fileID: 0}
 --- !u!4 &1303411048
 Transform:
   m_ObjectHideFlags: 0
@@ -4007,9 +3993,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1027175079354532261, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 604264163}
-    - targetCorrespondingSourceObject: {fileID: 1027175079354532261, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 604264169}
     - targetCorrespondingSourceObject: {fileID: 1027175079354532261, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 604264170}
@@ -5083,8 +5066,8 @@ MonoBehaviour:
     along the edges of your vision. Looks like the staff has clocked out for the
     night, though. Do your best to maintain your sanity and survive!\x03"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
