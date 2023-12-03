@@ -39,32 +39,32 @@ public class GameManager : MonoBehaviour
     }
 
     // called by nextBtn
-    // public void DisplayInstructions(){
-    //     // removing previous UI Elements
-    //     welcomeText.gameObject.SetActive(false);
-    //     storyText.gameObject.SetActive(false);
-    //     nextBtn.gameObject.SetActive(false);
+    public void DisplayInstructions(){
+        // removing previous UI Elements
+        welcomeText.gameObject.SetActive(false);
+        storyText.gameObject.SetActive(false);
+        nextBtn.gameObject.SetActive(false);
 
-    //     // adding new UI Elements
-    //     instructionsTitle.gameObject.SetActive(true);
-    //     instruction1.gameObject.SetActive(true);
-    //     instruction2.gameObject.SetActive(true);
-    //     instruction3.gameObject.SetActive(true);
-    //     startBtn.gameObject.SetActive(true);
-    // }
+        // adding new UI Elements
+        instructionsTitle.gameObject.SetActive(true);
+        instruction1.gameObject.SetActive(true);
+        instruction2.gameObject.SetActive(true);
+        instruction3.gameObject.SetActive(true);
+        startBtn.gameObject.SetActive(true);
+    }
 
-    // // called by startBtn
-    // public void RemoveInstructions(){
+    // called by startBtn
+    public void RemoveInstructions(){
 
-    //     canMove = true;
+        canMove = true;
 
-    //     // removing previous UI Elements
-    //     instructionsTitle.gameObject.SetActive(false);
-    //     instruction1.gameObject.SetActive(false);
-    //     instruction2.gameObject.SetActive(false);
-    //     instruction3.gameObject.SetActive(false);
-    //     startBtn.gameObject.SetActive(false);
-    // }
+        // removing previous UI Elements
+        instructionsTitle.gameObject.SetActive(false);
+        instruction1.gameObject.SetActive(false);
+        instruction2.gameObject.SetActive(false);
+        instruction3.gameObject.SetActive(false);
+        startBtn.gameObject.SetActive(false);
+    }
 
     
 }
