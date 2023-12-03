@@ -5407,14 +5407,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canMove: 0
-  welcomeText: {fileID: 0}
-  storyText: {fileID: 0}
-  nextBtn: {fileID: 0}
-  instructionsTitle: {fileID: 0}
-  instruction1: {fileID: 0}
-  instruction2: {fileID: 0}
-  instruction3: {fileID: 0}
-  startBtn: {fileID: 0}
+  welcomeText: {fileID: 2138250416}
+  storyText: {fileID: 1840266562}
+  nextBtn: {fileID: 1197377376}
+  instructionsTitle: {fileID: 879524848}
+  instruction1: {fileID: 1482299290}
+  instruction2: {fileID: 1796016594}
+  instruction3: {fileID: 383100954}
+  startBtn: {fileID: 296572538}
 --- !u!4 &1303411048
 Transform:
   m_ObjectHideFlags: 0
