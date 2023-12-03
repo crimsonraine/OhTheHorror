@@ -10,19 +10,12 @@ public class EnemyAI : MonoBehaviour
     public Transform player;
     void Start()
     {
-        // StartCoroutine(JumpForward());
     }
 
     void Update()
     {
         ai.destination = player.position;
-        ai.speed = 5.5f;
+        ai.speed = 3.5f;
         anim.speed = 0.5f;
     }
-
-    // IEnumerator JumpForward()
-    // {
-    //     yield return new WaitForSeconds(2f);
-    //     GetComponent<Rigidbody>().AddForce((transform.forward + transform.up) * 7f, ForceMode.Impulse);
-    // }
 }
