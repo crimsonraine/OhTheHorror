@@ -12,6 +12,9 @@ namespace StarterAssets
 	public class FirstPersonController : MonoBehaviour
 	{
 
+		public GameManager script;
+
+
 		[Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 4.0f;
@@ -120,11 +123,10 @@ namespace StarterAssets
 
 		private void LateUpdate()
 		{
-			// while (GameManager.instance.canMove)
-			// {
-			// 	CameraRotation();
-			// }
-			CameraRotation();
+			if (script.canMove)
+			{
+				CameraRotation();
+			}
 		}
 
 		private void GroundedCheck()

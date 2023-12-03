@@ -7,8 +7,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
 
-    public static GameManager instance;
-    public static bool canMove;
+    public bool canMove;
 
     public TextMeshProUGUI welcomeText;
     public TextMeshProUGUI storyText;
@@ -24,7 +23,10 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         canMove = false;
+        
         welcomeText.gameObject.SetActive(true);
         storyText.gameObject.SetActive(true);
         nextBtn.gameObject.SetActive(true);
