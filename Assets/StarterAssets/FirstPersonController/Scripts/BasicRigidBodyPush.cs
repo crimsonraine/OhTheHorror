@@ -11,6 +11,7 @@ public class BasicRigidBodyPush : MonoBehaviour
 		if (canPush) PushRigidBodies(hit);
 	}
 
+
 	private void PushRigidBodies(ControllerColliderHit hit)
 	{
 		// https://docs.unity3d.com/ScriptReference/CharacterController.OnControllerColliderHit.html

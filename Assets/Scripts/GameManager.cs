@@ -6,6 +6,8 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+
+    public int balloonCounter = 0;
     public GameObject enemy;
     public GameObject player;
 
@@ -29,7 +31,16 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI instruction1;
     public TextMeshProUGUI instruction2;
     public TextMeshProUGUI instruction3;
+    public TextMeshProUGUI instruction4;
     public Button startBtn;
+
+    public TextMeshProUGUI balloonsFound;
+    public TextMeshProUGUI sanityLevel;
+
+    // public DetectCollision detectCollision;
+
+    public bool zombieCollide;
+    public bool balloonCollide;
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +60,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         dist = Vector3.Distance(player.transform.position, enemy.transform.position);
+        sanityLevel.SetText($"Sanity Level: {dist}");
     }
 
     void StartTeleporting()
@@ -85,6 +97,7 @@ public class GameManager : MonoBehaviour
         instruction1.gameObject.SetActive(true);
         instruction2.gameObject.SetActive(true);
         instruction3.gameObject.SetActive(true);
+        instruction4.gameObject.SetActive(true);
         startBtn.gameObject.SetActive(true);
     }
 
@@ -99,7 +112,12 @@ public class GameManager : MonoBehaviour
         instruction1.gameObject.SetActive(false);
         instruction2.gameObject.SetActive(false);
         instruction3.gameObject.SetActive(false);
+        instruction4.gameObject.SetActive(false);
         startBtn.gameObject.SetActive(false);
+
+        // adding new UI Elements
+        balloonsFound.gameObject.SetActive(true);
+        sanityLevel.gameObject.SetActive(true);
 
         isGameActive = true;
         Invoke("StartTeleporting", 10.0f);
