@@ -80,6 +80,7 @@ public class GameManager : MonoBehaviour
             //     player.transform.position.y,
             //     player.transform.position.z + Random.Range(-teleportDist, teleportDist)
             // );
+            
             enemy.transform.position = new Vector3(0f, 4f, 12f);
         }
     }

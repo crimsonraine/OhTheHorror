@@ -18,7 +18,6 @@ public class Door : MonoBehaviour
     {
         if (other.CompareTag("MainCamera"))
         {
-            // gameManager.setDoorInstruction(true);
             interactable = true;
         }
     }
@@ -26,7 +25,6 @@ public class Door : MonoBehaviour
     {
         if (other.CompareTag("MainCamera"))
         {
-            // gameManager.setDoorInstruction(false);
             interactable = false;
         }
     }
