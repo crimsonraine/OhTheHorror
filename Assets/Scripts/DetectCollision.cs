@@ -8,6 +8,7 @@ public class DetectCollision : MonoBehaviour
 {
 
     public GameManager gameManager;
+    public BalloonSFX balloonSFX;
     public string won = "won";
     public string lost = "lost";
     public string game = "game";
@@ -19,10 +20,6 @@ public class DetectCollision : MonoBehaviour
     void Start()
     {
         objCollide = null;
-
-        // if (objCollide != null){
-        //     objCollide();
-        // }
     }
 
     void Update()
@@ -41,6 +38,7 @@ public class DetectCollision : MonoBehaviour
 
         string msg = $"Balloons Found: {gameManager.balloonCounter}/5";
         gameManager.balloonsFound.SetText(msg);
+        balloonSFX.playBalloonSFX();
 
 
         if (gameManager.balloonCounter == 5){
