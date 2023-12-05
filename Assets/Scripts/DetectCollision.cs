@@ -47,6 +47,7 @@ public class DetectCollision : MonoBehaviour
             objCollide += loadWonScreen;
             objCollide();
         }
+        
     }
 
     public void ZombieCollision(Collider other)
