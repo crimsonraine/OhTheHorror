@@ -7,19 +7,34 @@ using UnityEngine.TestTools;
 public class Presentation
 {
     // A Test behaves as an ordinary method
-    [Test]
-    public void UpdateBalloonCounterTest()
-    {
-        // Use the Assert class to test conditions
-
-    }
+    // [Test]
+    // public void TestOpenCloseAngle()
+    // {
+    //     // Use the Assert class to test conditions
+    // }
 
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
     // `yield return null;` to skip a frame.
+
     [UnityTest]
-    public IEnumerator PresentationWithEnumeratorPasses()
+    public IEnumerator RotationTester()
     {
 
+        var gameObject = new GameObject("DoorObject");
+        var doorLikeObj = gameObject.AddComponent<Door>();
+        float baseRotation = doorLikeObj.transform.rotation.eulerAngles.y;
+
+        doorLikeObj.GetComponent<Door>.Open();
+
+        yield return new WaitForSeconds(1f);
+
+        Assert.AreEqual(baseRotation + 90, doorLikeObj.transform.rotation.eulerAngles.y);
+        yield return null;
+    }
+
+    [UnityTest]
+    public IEnumerator UpdateBalloonCounterTest()
+    {
         // testing the function UpdateBalloonCounter
         var gameObject = new GameObject();
 
@@ -33,8 +48,5 @@ public class Presentation
 
         Assert.AreEqual(1, gameManager.balloonsCounter);
         Assert.AreEqual("Balloons Found: 2/5", detectCollision.UpdateBalloonCounter(););
-
-
-        yield return null;
     }
 }

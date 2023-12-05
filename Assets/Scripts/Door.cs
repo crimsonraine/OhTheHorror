@@ -6,6 +6,7 @@ public class Door : MonoBehaviour
 {
     public GameManager gameManager;
     private float baseRotation;
+    private bool rotated;
     public bool interactable;
 
     void Start()
@@ -31,10 +32,12 @@ public class Door : MonoBehaviour
 
     void Open() {
         transform.Rotate(new Vector3(0, 90, 0));
+        rotated = true;
     }
 
     void Close() {
         transform.Rotate(new Vector3(0, -90, 0));
+        rotated = false;
     }
 
     void Update()
