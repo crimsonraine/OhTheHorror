@@ -75,6 +75,7 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(teleportRate);
 
+            // periodically teleport the enemy in your vicinity - crazy difficult
             // Vector3 teleportPosition = new Vector3(
             //     player.transform.position.x + Random.Range(-teleportDist, teleportDist),
             //     player.transform.position.y,
