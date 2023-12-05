@@ -14,8 +14,8 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
-        // ai.destination = player.position;
-        // ai.speed = 3.5f;
-        // anim.speed = 0.5f;
+        ai.destination = player.position;
+        ai.speed = 3.5f;
+        anim.speed = 0.5f;
     }
 }
