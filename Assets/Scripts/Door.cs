@@ -28,17 +28,26 @@ public class Door : MonoBehaviour
             interactable = false;
         }
     }
+
+    void Open() {
+        transform.Rotate(new Vector3(0, 90, 0));
+    }
+
+    void Close() {
+        transform.Rotate(new Vector3(0, -90, 0));
+    }
+
     void Update()
     {
         if (interactable == true && Input.GetKeyDown(KeyCode.F))
         {
             if (transform.rotation.eulerAngles.y == baseRotation)
             {
-                transform.Rotate(new Vector3(0, 90, 0));
+                Open();
             }
             else
             {
-                transform.Rotate(new Vector3(0, -90, 0));
+                Close();
             }
         }
     }
