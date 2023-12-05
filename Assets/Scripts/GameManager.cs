@@ -121,6 +121,8 @@ public class GameManager : MonoBehaviour
         sanityLevel.gameObject.SetActive(true);
 
         isGameActive = true;
+
+        // Balances the game, rudimentary patrol system after game officially starts
         Invoke("StartTeleporting", 10.0f);
     }
 
