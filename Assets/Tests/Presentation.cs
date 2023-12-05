@@ -8,9 +8,10 @@ public class Presentation
 {
     // A Test behaves as an ordinary method
     [Test]
-    public void PresentationSimplePasses()
+    public void UpdateBalloonCounterTest()
     {
         // Use the Assert class to test conditions
+
     }
 
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
@@ -18,8 +19,22 @@ public class Presentation
     [UnityTest]
     public IEnumerator PresentationWithEnumeratorPasses()
     {
-        // Use the Assert class to test conditions.
-        // Use yield to skip a frame.
+
+        // testing the function UpdateBalloonCounter
+        var gameObject = new GameObject();
+
+        public GameManager gameManager;
+        public DetectCollision detectCollision;
+
+        gameManager.balloonsCounter = 0;
+
+
+        detectCollision.UpdateBalloonCounter();
+
+        Assert.AreEqual(1, gameManager.balloonsCounter);
+        Assert.AreEqual("Balloons Found: 2/5", detectCollision.UpdateBalloonCounter(););
+
+
         yield return null;
     }
 }
