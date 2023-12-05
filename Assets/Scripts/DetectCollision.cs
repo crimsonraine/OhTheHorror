@@ -34,10 +34,7 @@ public class DetectCollision : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        gameManager.balloonCounter += 1;
-
-        string msg = $"Balloons Found: {gameManager.balloonCounter}/5";
-        gameManager.balloonsFound.SetText(msg);
+        UpdateBalloonCounter();
         balloonSFX.playBalloonSFX();
 
 
@@ -48,6 +45,13 @@ public class DetectCollision : MonoBehaviour
             changeScreen();
         }
 
+    }
+
+    public void UpdateBalloonCounter()
+    {
+        gameManager.balloonCounter += 1;
+        string msg = $"Balloons Found: {gameManager.balloonCounter}/5";
+        gameManager.balloonsFound.SetText(msg);
     }
 
     public void ZombieCollision(Collider other)
