@@ -13,13 +13,13 @@ public class DetectCollision : MonoBehaviour
     public string lost = "lost";
     public string game = "game";
 
-    public delegate void ObjCollide();
-    ObjCollide objCollide;
+    public delegate void ChangeScreen();
+    ChangeScreen changeScreen;
 
 
     void Start()
     {
-        objCollide = null;
+        changeScreen = null;
     }
 
     void Update()
@@ -44,10 +44,10 @@ public class DetectCollision : MonoBehaviour
         if (gameManager.balloonCounter == 5){
             Debug.Log("Game over; you won!");
             gameManager.isGameActive = false;
-            objCollide += loadWonScreen;
-            objCollide();
+            changeScreen += loadWonScreen;
+            changeScreen();
         }
-        
+
     }
 
     public void ZombieCollision(Collider other)
@@ -55,9 +55,8 @@ public class DetectCollision : MonoBehaviour
         Debug.Log("Game over; you lost");
         gameManager.isGameActive = false;
 
-        // DELEGATE
-        objCollide += loadLostScreen;
-        objCollide();
+        changeScreen += loadLostScreen;
+        changeScreen();
 
     }
 
@@ -76,15 +75,10 @@ public class DetectCollision : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("zc detected");
-            // collider = other;
-            // collide += ZombieCollision;
             ZombieCollision(other);
         } 
         else if (other.CompareTag("Balloon"))
         {
-            // collider = other;
-            // collide += BalloonCollision;
             BalloonCollision(other);
         }
     }
