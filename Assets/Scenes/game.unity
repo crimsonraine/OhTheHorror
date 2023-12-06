@@ -3633,7 +3633,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: d7bda4b1953c7402e8a6694c4c3cb46a, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 2946a31d771d94dcaaf92d8a1d4ff1d5, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &444031447
 GameObject:
@@ -12128,11 +12128,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 363264237667080991, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.919
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 363264237667080991, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.161
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 363264237667080991, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12166,17 +12166,53 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1691297038}
+    - target: {fileID: 896256374427641757, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1027175079354532261, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 1027175079354532261, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248474467832113870, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
+      propertyPath: m_Size.x
+      value: 0.46936032
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248474467832113870, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
+      propertyPath: m_Size.y
+      value: 2.1423628
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248474467832113870, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
+      propertyPath: m_Size.z
+      value: 0.53139395
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248474467832113870, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
+      propertyPath: m_Center.x
+      value: -0.006873228
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248474467832113870, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
+      propertyPath: m_Center.y
+      value: 0.7756391
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248474467832113870, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
+      propertyPath: m_Center.z
+      value: -0.23430286
       objectReference: {fileID: 0}
     - target: {fileID: 5248474467832113870, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8574351135388595110, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
+      propertyPath: m_Height
+      value: 1.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 8574351135388595110, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
+      propertyPath: m_BaseOffset
+      value: 0.04
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
